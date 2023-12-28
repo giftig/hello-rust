@@ -1,6 +1,6 @@
 pub mod basic;
 
-use crate::{Dog, Woofer};
+use basic::{Dog, Woofer};
 
 pub fn woof() {
     // We can collect a Vector of Woofers, anything with a typeclass providing the

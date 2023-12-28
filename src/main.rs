@@ -1,12 +1,16 @@
 pub mod crab;
 pub mod oop;
-
-use oop::basic::{Dog, Woofer};
+pub mod json;
 
 fn main() {
     crab::say_slogan();
     println!("\n==========================================\n");
+
     oop::woof();
+    println!("\n==========================================\n");
+
+    json::read_json().unwrap();
+    println!("\n==========================================\n");
 }
 
 // ⭐ Ownership and borrowing concepts seem important in Rust
