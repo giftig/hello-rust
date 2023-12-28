@@ -1,0 +1,6 @@
+{
+  "title": "The Grass is Always Greener over the Septic Tank",
+  "author": "Erma Bombeck",
+  "isbn": "9780449201060",
+  "description": "Naturally, extra JSON fields won't upset parsing into a struct by default"
+}
