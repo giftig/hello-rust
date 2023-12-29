@@ -2,9 +2,9 @@ use ferris_says::say;
 
 use std::io::{BufWriter, stdout};
 
-pub fn say_slogan() -> () {
+pub fn say_slogan(slogan: String) -> () {
     let stdout = stdout();
-    let mut message = String::from("I'm a stupid shit-eating crab");
+    let mut message = slogan;
 
     // ❗ String is a mutable string created from the literal, str. We can append to the String
     // format! is how Rust does string interpolation.
