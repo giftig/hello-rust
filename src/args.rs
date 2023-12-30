@@ -6,7 +6,9 @@ use clap::{Parser, ValueEnum};
 #[clap(rename_all = "kebab-case")]
 pub enum DemoType {
     All,
+    Async,
     Books,
+    Channels,
     CrabSay,
     Json,
     Ownership,

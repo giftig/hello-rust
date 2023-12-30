@@ -1,4 +1,5 @@
 pub mod args;
+pub mod channel;
 pub mod crab;
 pub mod json;
 pub mod oop;
@@ -16,6 +17,7 @@ fn main() {
         DemoType::Json | DemoType::Books => json::read_json().unwrap(),
         DemoType::Woof => oop::woof(),
         DemoType::Ownership => own::ownership(),
+        DemoType::Async | DemoType::Channels => channel::channel_demo(),
     }
 
 }
@@ -31,5 +33,8 @@ fn all_demos(args: Args) -> () {
     println!("\n==========================================\n");
 
     own::ownership();
+    println!("\n==========================================\n");
+
+    channel::channel_demo();
     println!("\n==========================================\n");
 }
