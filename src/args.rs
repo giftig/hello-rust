@@ -9,6 +9,7 @@ pub enum DemoType {
     Books,
     CrabSay,
     Json,
+    Ownership,
     Woof
 }
 

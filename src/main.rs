@@ -1,7 +1,8 @@
 pub mod args;
 pub mod crab;
-pub mod oop;
 pub mod json;
+pub mod oop;
+pub mod own;
 
 use args::{Args, DemoType};
 use clap::Parser;
@@ -14,6 +15,7 @@ fn main() {
         DemoType::CrabSay => crab::say_slogan(args.crab_phrase),
         DemoType::Json | DemoType::Books => json::read_json().unwrap(),
         DemoType::Woof => oop::woof(),
+        DemoType::Ownership => own::ownership(),
     }
 
 }
@@ -27,7 +29,7 @@ fn all_demos(args: Args) -> () {
 
     json::read_json().unwrap();
     println!("\n==========================================\n");
-}
 
-// ⭐ Ownership and borrowing concepts seem important in Rust
-// https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html
+    own::ownership();
+    println!("\n==========================================\n");
+}
