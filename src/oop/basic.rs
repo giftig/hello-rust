@@ -4,6 +4,13 @@ pub struct Dog {
     pub size: i32
 }
 
+// ... and separately define methods associated with a type as an impl
+impl Dog {
+    pub fn sniff_butt(&self) -> () {
+        println!("{}: sniff sniff", self.name);
+    }
+}
+
 // Rust traits define capabilities...
 pub trait Woofer {
     fn woof(&self) -> String;
